@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angela ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:black;
+font-family:Arial, sans-serif;
+}
+
+.slider{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+animation:fade 16s infinite;
+}
+
+.slide:nth-child(1){
+background-image:url('foto1.jpg');
+animation-delay:0s;
+}
+
+.slide:nth-child(2){
+background-image:url('foto2.jpg');
+animation-delay:8s;
+}
+
+@keyframes fade{
+0%,100%{opacity:0;}
+10%,40%{opacity:1;}
+50%,90%{opacity:0;}
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+z-index:-1;
+}
+
+.container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.message{
+color:white;
+}
+
+.message h1{
+font-family:'Dancing Script',cursive;
+font-size:4rem;
+text-shadow:0 0 25px #ff7eb9;
+animation:aparecer 3s ease;
+}
+
+.message p{
+margin-top:20px;
+font-size:1.3rem;
+color:#ffd7e8;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.hearts span{
+position:absolute;
+display:block;
+color:#ff6ea9;
+font-size:25px;
+animation:corazon 12s linear infinite;
+}
+
+@keyframes corazon{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+.footer{
+position:absolute;
+bottom:30px;
+width:100%;
+text-align:center;
+color:white;
+font-size:14px;
+letter-spacing:2px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+<div class="slide"></div>
+<div class="slide"></div>
+</div>
+
+<div class="overlay"></div>
+
+<audio autoplay loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts">
+<span style="left:10%;animation-delay:0s;">❤️</span>
+<span style="left:25%;animation-delay:3s;">❤️</span>
+<span style="left:40%;animation-delay:6s;">❤️</span>
+<span style="left:55%;animation-delay:1s;">❤️</span>
+<span style="left:70%;animation-delay:5s;">❤️</span>
+<span style="left:85%;animation-delay:8s;">❤️</span>
+</div>
+
+<div class="container">
+<div class="message">
+
+<h1>
+MI FELICIDAD SIEMPRE SERÁ VERTE FELIZ ❤️
+</h1>
+
+<p>
+Angela, gracias por cada sonrisa,
+cada abrazo y cada momento compartido.
+Eres la persona que ilumina mis días
+y le da sentido a mi corazón.
+</p>
+
+</div>
+</div>
+
+<div class="footer">
+07 • 06 • 2023 ❤️
+</div>
+
+</body>
+</html>
